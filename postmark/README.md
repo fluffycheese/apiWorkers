@@ -6,6 +6,7 @@ Inegration with Postmark SMTP relay. Could probably be easily modified to work w
 - [x] Replace token with secret
 - [ ] adjust to also handle bounce list, for better security (currently is direct homepage API call)
 - [x] Finish readme
+- [ ] Move homepage to seperate yaml file (to shorten readme if other dashboards, website docs are neded)
 ## Postmark API/Credentials
 
 # Sent and Bounced Metrics
@@ -21,40 +22,4 @@ This worker is for querying and manipulating API calls between Postmark and Home
 ## Homepage integration
 1. Copy the [Postmark icon](../assets/icons/postmark.svg) into your `homepage/config/icons` directory
 2. Open `homepage/config/services.yaml` copy in the below to the appropriate services group, changing any `<variables>`
-```yaml
-    - Postmark:
-        href: <URL of your Postmark dashboard>
-        icon: /icons/postmark.svg
-        description: 📬 Yesterdays outbound emails
-        widget:
-            type: customapi
-            url: <URL of your Cloudflare worker>
-            refreshInterval: 10800000 # 10800000 = 3hr # optional - in milliseconds, defaults to 10s (10000)
-            mappings:
-                - field: Sent
-                  label: Sent
-                  format: number
-                - field: Bounced
-                  label: Bounced
-                  format: number
-                - field: SpamComplaints
-                  label: Spam
-                  format: number
-    - Bounces:
-        href: <URL of your Postmark dashboard>
-        icon: /icons/postmark.svg
-        description: 📬 Last 5 Bounces
-        widget:
-            type: customapi
-            url: https://api.postmarkapp.com/bounces?type=HardBounce&inactive=true&count=50&offset=0
-            headers:
-                Accept: application/json
-                X-Postmark-Server-Token: <Your server token>
-            display: dynamic-list
-            mappings:
-                items: Bounces # optional, the path to the array in the API response. Omit this option if the array is at the root level
-                name: Email # required, field in each item to use as the item name (left side)
-                label: Description # required, field in each item to use as the item label (right side)
-                limit: 5 # optional, limit the number of items to display
-                target: https://account.postmarkapp.com/servers/<YOUR_SERVER>/streams/outbound/messages/{MessageID}
-```
+3. Copy in [`homepage.yaml`](/dashboards/homepaghe.yaml)
