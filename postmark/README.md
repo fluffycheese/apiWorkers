@@ -22,4 +22,4 @@ This worker is for querying and manipulating API calls between Postmark and Home
 ## Homepage integration
 1. Copy the [Postmark icon](../assets/icons/postmark.svg) into your `homepage/config/icons` directory
 2. Open `homepage/config/services.yaml` copy in the below to the appropriate services group, changing any `<variables>`
-3. Copy in [`homepage.yaml`](/dashboards/homepage.yaml)
+3. Copy in [`homepage.yaml`](dashboards/homepage.yaml)
