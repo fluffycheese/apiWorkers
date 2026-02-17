@@ -1,4 +1,4 @@
-<img src="/stephenjackson/cf-workers/media/branch/main/assets/icons/ruckus.svg" alt="Ruckus logo" width="300px">
+<img src="/assets/icons/ruckus.svg" alt="Ruckus logo" width="300px">
 
 # Ruckus R1 Workers
 Inegration with Ruckus R1. Could probably be easily modified to work with other Ruckus products.

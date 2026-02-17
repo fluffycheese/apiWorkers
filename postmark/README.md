@@ -1,4 +1,4 @@
-<img src="/stephenjackson/cf-workers/media/branch/main/assets/icons/postmark.svg" alt="Postmark logo" width="300px">
+<img src="/assets/icons/postmark.svg" alt="Postmark logo" width="300px">
 
 # Postmark Workers
 Inegration with Postmark SMTP relay. Could probably be easily modified to work with other SMTP relay providers or self hosted email server.
