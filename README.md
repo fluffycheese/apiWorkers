@@ -1,4 +1,4 @@
-<img src="/stephenjackson/cf-workers/media/branch/main/assets/icons/cloudflare.png" alt="Cloudflare logo" width="300px">
+<img src="/assets/icons/cloudflare.png" alt="Cloudflare logo" width="300px">
 
 # Cloudflare Workers
 A collection of Cloudflare workers. Mostly for dynamic API request and manipulation for use with [Homepage](https://github.com/gethomepage/homepage). This is for added security as Homepage stores API tokens in plaintext in the `services.yaml` file and for better functionality as Homepage is unable to more complex, dynamic queries/manipulation. Don't get me wrong, Homepage is a **great** app and I have several instances deployed in production, I just needed to create these to get around some it's limitations.
