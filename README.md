@@ -6,8 +6,8 @@ A collection of Cloudflare workers. Mostly for dynamic API request and manipulat
 - [ ] Add firewall rule blocks all other traffic globally and Worker IP check to prevent accidental bypass (e.g., via custom routing)
 - [x] Fix logo size for readme headings
 - [x] Rebuild all deployed Homepage API calls with CF workers for added security
-- [ ] Learn `wrangler` so can fully automate deployment with the Cloudflare API and scripting
-- [ ] Develop "dual-stack" deployment methodoligy with custom docker images for each worker
+- [ ] Use `wrangler` for fully automated deployment with the Cloudflare API and scripting
+- [ ] Develop "dual-stack" deployment methodoligy with custom docker images and/or nipkgs, nixos for each worker
 ## Development
 ### Local Development
 Packages to install
