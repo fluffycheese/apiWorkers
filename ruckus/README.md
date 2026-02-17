@@ -85,38 +85,8 @@ This worker is for querying and manipulating API calls between Ruckus R1 and Hom
 ## Homepage integration
 1. Copy the [Ruckus icon](../assets/icons/ruckus.png) into your `homepage/config/icons` directory
 2. Open `homepage/config/services.yaml` copy in the below to the appropriate services group, changing any `<variables>`
-```yaml
-    - Ruckus:
-        href: <URL of your Ruckus R1 dahboard>
-        icon: /icons/ruckus.png
-        description: Staff WiFi DPSK # change as required
-        widget:
-            type: customapi
-            url: <URL of your Cloudflare worker>
-            refreshInterval: 10800000 # 10800000 = 3hr # optional - in milliseconds, defaults to 10s (10000)
-            mappings: 
-                - field: totalPassphrases
-                  label: Total Passphrases
-                  format: number
-                - field: expiringIn14Days
-                  label: Expiring Soon
-                  format: number
-    - DPSK Expiring Soons:
-        href: <URL of your Ruckus R1 dahboard>
-        icon: /icons/ruckus.png
-        description: Staff WiFi DPSK's expiring in next 2 weeks # change as required
-        widget:
-            type: customapi
-            url: <URL of your Cloudflare worker>
-            refreshInterval: 10800000 # 10800000 = 3hr # optional - in milliseconds, defaults to 10s (10000)
-            display: dynamic-list
-            mappings:
-                items: expiringList # optional, the path to the array in the API response. Omit this option if the array is at the root level
-                name: Name # required, field in each item to use as the item name (left side)
-                label: username # required, field in each item to use as the item label (right side)
-                limit: 10 # optional, limit the number of items to display
-                target: <URL of your Cloudflare worker>
-```
+3. Copy in [`homepage.yaml`](dashboards/homepage.yaml)
+
 Your Homepage dashboard should now look something like
 
 ![expiringDpskHomepage icon](../assets/img/Screenshot_20251129_142410.png)
