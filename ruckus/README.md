@@ -2,6 +2,8 @@
 
 # Ruckus R1 Workers
 Inegration with Ruckus R1. Could probably be easily modified to work with other Ruckus products.
+## Todo
+- [ ] Investigate/implement env variables (if exist in CF) or secrets for tenant and client ID
 ## Create Application Token
 1. Login to [Ruckus](https://eu.ruckus.cloud)
 2. Navigate Administration > Settings
